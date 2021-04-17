@@ -38,7 +38,7 @@ const getVehiclesByManufacturer = asyncHandler(async (req, res) => {
 });
 
 // @desc    Edit Vehicle
-// @route   GET /api/Vehicles/:id
+// @route   Put /api/Vehicles/:id
 // @access  Private
 const updateVehicle = asyncHandler(async (req, res) => {
   const vehicle = await Vehicle.find(req.params.id);
@@ -86,3 +86,11 @@ const deleteVehicle = asyncHandler(async (req, res) => {
     throw new Error("Vehicle not found");
   }
 });
+
+export {
+  getVehicleByModel,
+  getVehicles,
+  getVehiclesByManufacturer,
+  updateVehicle,
+  deleteVehicle,
+};
