@@ -1,5 +1,5 @@
 import asyncHandler from "express-async-handler";
-import Vehicle from "../models/Vehicle";
+import Vehicle from "../models/Vehicle.js";
 
 // @desc    Fetch All Vehicles
 // @route   GET /api/Vehicles

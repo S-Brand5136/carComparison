@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import connectDb from "./config/db.js";
-import CarRoutes from "./routes/CarRoutes";
+import CarRoutes from "./routes/CarRoutes.js";
 
 dotenv.config();
 

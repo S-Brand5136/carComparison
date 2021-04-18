@@ -5,8 +5,8 @@ import {
   getVehiclesByManufacturer,
   updateVehicle,
   deleteVehicle,
-} from "../controllers/carController";
-import admin from "../middleware/authMiddleware";
+} from "../controllers/carController.js";
+import admin from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
