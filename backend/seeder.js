@@ -1,6 +1,9 @@
+import dotenv from "dotenv";
 import connectDb from "./config/db.js";
 import Vehicle from "./models/Vehicle.js";
 import carData from "./data/carData.js";
+
+dotenv.config();
 
 connectDb();
 

@@ -64,3 +64,5 @@ const car = [
     ],
   },
 ];
+
+export default car;
