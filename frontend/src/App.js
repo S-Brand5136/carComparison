@@ -12,7 +12,9 @@ function App() {
       <main className="App">
         <SearchBar />
         <SideBar />
-        <Container fluid>{/* <CenterLayout /> */}</Container>
+        <Container fluid>
+          <CenterLayout />
+        </Container>
       </main>
     </ThemeProvider>
   );
