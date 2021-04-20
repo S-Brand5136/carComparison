@@ -16,7 +16,7 @@ const SearchForm = () => {
   return (
     <Paper component="form" elevation="0">
       <FormGroup row>
-        <FormControlLabel control={<Switch name="model" />} />
+        <FormControlLabel control={<Switch name="model" color="primary" />} />
       </FormGroup>
     </Paper>
   );
