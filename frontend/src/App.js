@@ -1,5 +1,5 @@
-import "./App.css";
-import Title from "./components/Title";
+import SearchBar from "./components/SearchBar";
+import SideBar from "./components/SideBar";
 import CenterLayout from "./components/CenterLayout";
 import theme from "./services.js/apperance";
 
@@ -10,10 +10,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <main className="App">
-        <Title />
-        <Container fluid>
-          <CenterLayout />
-        </Container>
+        <SearchBar />
+        <SideBar />
+        <Container fluid>{/* <CenterLayout /> */}</Container>
       </main>
     </ThemeProvider>
   );
