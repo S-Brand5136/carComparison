@@ -23,6 +23,25 @@ const theme = createMuiTheme({
         color: "black",
       },
     },
+    MuiListItemText: {
+      root: {
+        color: "black",
+      },
+    },
+    MuiContainer: {
+      root: {
+        paddingTop: "5.5rem",
+        marginLeft: "280px",
+      },
+      maxWidthLg: {
+        maxWidth: "1500px !important",
+      },
+    },
+    MuiFormLabel: {
+      root: {
+        color: cyan[500],
+      },
+    },
   },
 });
 

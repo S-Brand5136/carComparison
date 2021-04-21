@@ -1,21 +1,24 @@
 import React, { useEffect } from "react";
-import SearchForm from "./SearchForm";
+import FilterMenu from "./FilterMenu";
+import SearchBar from "./SearchBar";
 
-import { Grid } from "@material-ui/core";
-import searchForm from "./SearchForm";
+import { Box, Grid } from "@material-ui/core";
 
 const CenterLayout = () => {
   useEffect(() => {}, []);
 
   return (
-    <Grid container justify="center">
-      <Grid item xs={4}>
-        <SearchForm />
+    <Box component="section">
+      <SearchBar />
+      <Grid container justify="center">
+        <Grid item xs={12}>
+          <FilterMenu />
+        </Grid>
+        <Grid item xs={8}>
+          <Grid container justify="center"></Grid>
+        </Grid>
       </Grid>
-      <Grid item xs={8}>
-        <Grid container justify="center"></Grid>
-      </Grid>
-    </Grid>
+    </Box>
   );
 };
 

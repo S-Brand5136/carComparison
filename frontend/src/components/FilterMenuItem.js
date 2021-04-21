@@ -1,24 +1,29 @@
 import React, { useState } from "react";
+
 import {
-  AppBar,
   Button,
+  Grid,
+  FormControl,
+  FormLabel,
+  FormGroup,
   Menu,
   MenuItem,
   makeStyles,
-  Toolbar,
 } from "@material-ui/core";
 import { ArrowDropDown } from "@material-ui/icons";
 
-const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
-  appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
+  icon: {
+    paddingLeft: "1rem",
+  },
+  button: {
+    padding: ".5rem 0 0 0",
+    color: "black",
+    fontSize: "11px",
   },
 }));
 
-const SearchBar = () => {
+const FilterMenuItem = ({ arrayOfItems, filterLabel }) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -31,30 +36,31 @@ const SearchBar = () => {
   };
 
   return (
-    <AppBar className={classes.appBar} color="primary" elevation="0">
-      <Toolbar>
+    <Grid item xs={2}>
+      <FormControl>
+        <FormLabel color="primary">Rating</FormLabel>
         <Button
-          aria-controls="customized-menu"
+          aria-controls="simple-menu"
           aria-haspopup="true"
-          variant="text"
           onClick={handleClick}
+          color="primary"
+          variant="text"
+          className={classes.button}
         >
-          All Manufacturers <ArrowDropDown />
+          Open Menu <ArrowDropDown className={classes.icon} />
         </Button>
         <Menu
-          id="customized-menu"
+          id="simple-menu"
           anchorEl={anchorEl}
           keepMounted
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <MenuItem>Ford</MenuItem>
-          <MenuItem>Audi</MenuItem>
-          <MenuItem>Toyota</MenuItem>
+          <MenuItem onClick={handleClose}>Rating</MenuItem>
         </Menu>
-      </Toolbar>
-    </AppBar>
+      </FormControl>
+    </Grid>
   );
 };
 
-export default SearchBar;
+export default FilterMenuItem;

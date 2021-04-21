@@ -1,4 +1,3 @@
-import SearchBar from "./components/SearchBar";
 import SideBar from "./components/SideBar";
 import CenterLayout from "./components/CenterLayout";
 import theme from "./services.js/apperance";
@@ -8,14 +7,11 @@ import { ThemeProvider } from "@material-ui/core/styles";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <main className="App">
-        <SearchBar />
-        <SideBar />
-        <Container fluid>
-          <CenterLayout />
-        </Container>
-      </main>
+    <ThemeProvider className="App" theme={theme}>
+      <SideBar />
+      <Container>
+        <CenterLayout />
+      </Container>
     </ThemeProvider>
   );
 }
